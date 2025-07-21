@@ -62,13 +62,10 @@ export default function LoginPage() {
 
         <p className="text-white text-center mt-3">
           Don't have an account?{' '}
-          <span
-            onClick={() => navigate("/register")}
-            className="text-warning"
-            style={{ cursor: "pointer" }}
-          >
-            Register
-          </span>
+          <a href="#/register" className="text-warning" style={{ cursor: "pointer" }}>
+  Register
+</a>
+
         </p>
       </div>
     </div>
