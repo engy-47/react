@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/Home/HomePage';
 import MyBoxPage from './components/Myboxrange/MyboxRange';
 import SpecialOffersPage from './components/Myboxrange/SpecialOffer';
@@ -19,7 +19,6 @@ import RegisterPage from './components/Home/RegisterPage';
 import ProductsPage from './components/Home/ProductsPage';
 import CartPage from './components/Home/CartPage';
 import Footer from './components/Footer/footer';
-import { CartProvider } from './components/Home/CartContext';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -34,39 +33,33 @@ function App() {
   }, []);
 
   return (
-    <CartProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/my-box" element={<MyBoxPage />} />
-          <Route path="/special-offers" element={<SpecialOffersPage />} />
-          <Route path="/for-sharing" element={<ForSharingPage />} />
-          <Route path="/for-one" element={<ForOnePage />} />
-          <Route path="/starters" element={<StartersPage />} />
-          <Route path="/pizza" element={<PizzaPage />} />
-          <Route path="/hut-favorite" element={<HutFavorite />} />
-          <Route path="/hut-signatures" element={<HutSignatures />} />
-          <Route path="/drinks-desserts" element={<DrinksDesserts />} />
-          <Route path="/kids" element={<Kids />} />
-          <Route path="/my-favourite" element={<MyFavourite />} />
-          <Route path="/dips-seasoning" element={<Dips />} />
-          <Route path="/build-your-own" element={<BuildYourOwn />} />
-        </Routes>
-        <Footer />
-      </Router>
-    </CartProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/my-box" element={<MyBoxPage />} />
+        <Route path="/special-offers" element={<SpecialOffersPage />} />
+        <Route path="/for-sharing" element={<ForSharingPage />} />
+        <Route path="/for-one" element={<ForOnePage />} />
+        <Route path="/starters" element={<StartersPage />} />
+        <Route path="/pizza" element={<PizzaPage />} />
+        <Route path="/hut-favorite" element={<HutFavorite />} />
+        <Route path="/hut-signatures" element={<HutSignatures />} />
+        <Route path="/drinks-desserts" element={<DrinksDesserts />} />
+        <Route path="/kids" element={<Kids />} />
+        <Route path="/my-favourite" element={<MyFavourite />} />
+        <Route path="/dips-seasoning" element={<Dips />} />
+        <Route path="/build-your-own" element={<BuildYourOwn />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
 export default App;
-
-
-
-
 
 
 
