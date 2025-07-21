@@ -57,13 +57,13 @@ export default function RegisterPage() {
             />
           </div>
 
-          <button type="submit" className="btn btn-success w-100 btn-lg">
+          <button type="submit" className="btn btn-danger w-100 btn-lg">
             Register
           </button>
         </form>
         <p className="text-white text-center mt-3">
           Already have an account?{' '}
-          <Link to="/login" className="text-warning">Login</Link>
+          <Link to="/login" className="text-danger link-hover">Login</Link>
         </p>
       </div>
     </div>

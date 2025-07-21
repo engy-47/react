@@ -9,7 +9,7 @@
 }
 
 .login-box {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   padding: 50px 40px;
   border-radius: 20px;
@@ -64,7 +64,14 @@ label {
   background-color: #c0392b;
 }
 
-a.text-warning:hover {
+a.text-danger,
+a.text-danger:visited {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+a.text-danger.link-hover:hover {
   text-decoration: underline;
 }
+
 

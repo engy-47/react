@@ -20,7 +20,7 @@ export default function LoginPage() {
 
     if (email === savedUser.email && password === savedUser.password) {
       alert(`🧾 Login Successful!\nWelcome back, ${savedUser.name} 🍕`);
-      navigate("/"); // or "/home" if you have a home route
+      navigate("/");
     } else {
       alert("❌ Invalid email or password. Please try again.");
     }
@@ -28,7 +28,7 @@ export default function LoginPage() {
 
   return (
     <div className="login-page d-flex justify-content-center align-items-center vh-100">
-      <div className="login-box shadow-lg bg-dark p-5 rounded" style={{ maxWidth: '400px', width: '100%' }}>
+      <div className="login-box shadow-lg">
         <h2 className="text-white mb-4 text-center">🍽️ Welcome Back</h2>
         <form onSubmit={handleLogin}>
           <div className="form-group mb-3">
@@ -62,15 +62,14 @@ export default function LoginPage() {
 
         <p className="text-white text-center mt-3">
           Don't have an account?{' '}
-          <a href="#/register" className="text-warning" style={{ cursor: "pointer" }}>
-  Register
-</a>
-
+          <a href="#/register" className="text-danger link-hover">Register</a>
         </p>
       </div>
     </div>
   );
 }
+
+
 
 
 
