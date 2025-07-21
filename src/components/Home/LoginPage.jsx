@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -20,7 +20,7 @@ export default function LoginPage() {
 
     if (email === savedUser.email && password === savedUser.password) {
       alert(`🧾 Login Successful!\nWelcome back, ${savedUser.name} 🍕`);
-      navigate("/");
+      navigate("/"); // or "/home" if you have a home route
     } else {
       alert("❌ Invalid email or password. Please try again.");
     }
@@ -62,12 +62,19 @@ export default function LoginPage() {
 
         <p className="text-white text-center mt-3">
           Don't have an account?{' '}
-          <Link to="/register" className="text-warning">Register</Link>
+          <span
+            onClick={() => navigate("/register")}
+            className="text-warning"
+            style={{ cursor: "pointer" }}
+          >
+            Register
+          </span>
         </p>
       </div>
     </div>
   );
 }
+
 
 
 
