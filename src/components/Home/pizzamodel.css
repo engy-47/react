@@ -1,0 +1,33 @@
+.pizza-modal .modal-content {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.pizza-size-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.pizza-size-box.selected {
+  border-color: red;
+  background-color: #ffecec;
+  font-weight: bold;
+}
+
+.option-img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.summary-section {
+  background-color: #f9f9f9;
+  max-width: 350px;
+}

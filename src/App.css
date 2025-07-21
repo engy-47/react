@@ -1,0 +1,40 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color:white  !important;
+}
+
+.nav-wrapper {
+  border-bottom: 1px solid #eee;
+}
+
+.delivery-option {
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.delivery-option.active {
+  font-weight: bold;
+  color: #d71f27;
+}
+
+.location-select {
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #d71f27;
+  color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.carousel .carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}

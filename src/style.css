@@ -1,0 +1,19 @@
+.hero-slide {
+  background-color: #b30000;
+  height: 400px;
+}
+.hero-slide img {
+  max-height: 320px;
+}
+.menu-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.menu-card {
+  background: #fff;
+  transition: transform 0.3s;
+}
+.menu-card:hover {
+  transform: translateY(-5px);
+}
