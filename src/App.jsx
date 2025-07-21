@@ -1,5 +1,9 @@
+// src/App.jsx
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import HomePage from './components/Home/HomePage';
 import MyBoxPage from './components/Myboxrange/MyboxRange';
 import SpecialOffersPage from './components/Myboxrange/SpecialOffer';
@@ -23,9 +27,6 @@ import Footer from './components/Footer/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 function App() {
   useEffect(() => {
@@ -60,6 +61,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
