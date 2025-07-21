@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
+import { Link } from 'react-router-dom';
 
 export default function RegisterPage() {
   const [name, setName] = useState('');
@@ -12,7 +13,7 @@ export default function RegisterPage() {
     localStorage.setItem('restaurantUser', JSON.stringify(userData));
 
     alert("✅ Registration Successful!\nWelcome to our food family 🍕");
-    window.location.href = "/login";
+    window.location.href = "/#/login"; // أو يمكنكِ استخدام navigate
   };
 
   return (
@@ -62,10 +63,9 @@ export default function RegisterPage() {
         </form>
         <p className="text-white text-center mt-3">
           Already have an account?{' '}
-          <a href="/login" className="text-warning">Login</a>
+          <Link to="/login" className="text-warning">Login</Link>
         </p>
       </div>
     </div>
   );
 }
-
